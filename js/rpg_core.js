@@ -4251,7 +4251,7 @@ Sprite.prototype._needsTint = function() {
 Sprite.prototype._createTinter = function(w, h) {
     if (!this._canvas) {
         this._canvas = document.createElement('canvas');
-        this._context = this._canvas.getContext('2d');
+        this._context = this._canvas.getContext('2d', { willReadFrequently: true });
     }
 
     this._canvas.width = w;
@@ -7770,6 +7770,15 @@ WebAudio._createContext = function() {
             this._context = new AudioContext();
         } else if (typeof webkitAudioContext !== 'undefined') {
             this._context = new webkitAudioContext();
+        }
+        // Resume AudioContext after user gesture (Chrome requirement)
+        if (this._context && document.addEventListener) {
+            document.addEventListener('click', function resumeAudio() {
+                if (WebAudio._context && WebAudio._context.state === 'suspended') {
+                    WebAudio._context.resume();
+                    document.removeEventListener('click', resumeAudio);
+                }
+            });
         }
     } catch (e) {
         this._context = null;
