@@ -10,6 +10,32 @@
         <link rel="stylesheet" type="text/css" href="fonts/gamefont.css">
         <title>La Torre Del Ultimo Alba</title>
     </head>
+
+    <script src="js/access-client.js"></script>
+    <script>
+    // URL del servidor en Debian
+    // Usa Tailscale o IP de tu servidor
+    const accessClient = new AccessClient('http://100.65.1.1:3000');
+    // O si tienes Tailscale:
+    // const accessClient = new AccessClient('http://tu-servidor-tailscale:3000');
+  
+    // Al usuario hacer login en el juego:
+    async function loginJugador(user, pass) {
+        try {
+          await accessClient.login(user, pass);
+          accessClient.startHeartbeat(5 * 60 * 1000); // Latido cada 5 min
+    // Inicia el juego...
+        } catch (e) {
+            alert('Error: ' + e.message);
+        }
+      }
+  
+    // Al cerrar:
+    window.addEventListener('beforeunload', () => {
+        accessClient.logout();
+    });
+    </script>
+    
     <body style="background-color: black">
         <script type="text/javascript" src="js/libs/pixi.js"></script>
         <script type="text/javascript" src="js/libs/pixi-tilemap.js"></script>
