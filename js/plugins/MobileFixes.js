@@ -1,40 +1,31 @@
 /*:
- * @plugindesc Soluciona cancelar en batalla para móviles (versión sin escena de nombre).
- * @author Ruben
+ * @target MZ MV
+ * @plugindesc Añade una tecla de borrar en la entrada de nombre (usa '←' como delete) v1.0
+ * @author Ruben+Copilot
  */
 
 (function() {
 
-    // Helper para simular entrada de teclado
-    function simulateKeyPress(keyName) {
-        Input._currentState[keyName] = true;
-        Input._previousState[keyName] = false;
+  // Obtenemos el carácter de la casilla actual
+  const _Window_NameInput_character = Window_NameInput.prototype.character;
+  Window_NameInput.prototype.character = function() {
+    const c = _Window_NameInput_character.call(this);
+    return c;
+  };
+
+  // Sobrescribimos el OK de la cuadrícula
+  const _Window_NameInput_processOk = Window_NameInput.prototype.processOk;
+  Window_NameInput.prototype.processOk = function() {
+    const c = this.character();
+
+    // Si es la tecla de borrar (←), borramos un carácter
+    if (c === '←') {
+      this._editWindow.back();
+      return;
     }
 
-    // --- BOTÓN CANCELAR EN BATALLA ---
-    const createBattleCancelButton = Scene_Battle.prototype.createButtons;
-    Scene_Battle.prototype.createButtons = function() {
-        createBattleCancelButton.call(this);
-
-        if (Utils.isMobileDevice()) {
-            const btn = new Sprite_Button();
-            btn.bitmap = ImageManager.loadSystem('IconSet');
-
-            // Icono 0,0 del IconSet (puedes cambiarlo si quieres otro)
-            btn.setColdFrame(0, 0, ImageManager.iconWidth, ImageManager.iconHeight);
-            btn.setHotFrame(0, 0, ImageManager.iconWidth, ImageManager.iconHeight);
-
-            // Posición del botón
-            btn.x = Graphics.width - 120;
-            btn.y = Graphics.height - 120;
-
-            // Acción: simular Escape
-            btn.setClickHandler(() => {
-                simulateKeyPress('escape');
-            });
-
-            this.addChild(btn);
-        }
-    };
+    // Para cualquier otro caso, comportamiento normal
+    _Window_NameInput_processOk.call(this);
+  };
 
 })();
