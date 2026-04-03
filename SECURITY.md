@@ -12,7 +12,7 @@
 Si deseas reportar una vulnerabilidad de seguridad, debes hacerlo de manera privada y responsable. 
 No abras un issue público ni compartas la información en foros o redes sociales.
 
-Dónde reportar: Envía un correo a CaballeroDePlata@gmail.com
+Dónde reportar: Envía un correo a caballerodeplatanemesis@gmail.com
 ### Información necesaria:
   - Incluye una descripción clara de la vulnerabilidad 
   - Los pasos para reproducirla, el impacto potencial
