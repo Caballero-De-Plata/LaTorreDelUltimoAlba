@@ -1,14 +1,17 @@
 [
 null,
-{"id":1,"expanded":true,"name":"Inicio","order":1,"parentId":0,"scrollX":582.5454545454545,"scrollY":640},
-{"id":2,"expanded":true,"name":"Entrada-a-la-Torre","order":2,"parentId":0,"scrollX":832,"scrollY":640},
-{"id":3,"expanded":true,"name":"Zona de Descanso","order":6,"parentId":0,"scrollX":582.5454545454545,"scrollY":442.1818181818182},
-{"id":4,"expanded":true,"name":"BatallasFase1","order":3,"parentId":2,"scrollX":595.6363636363636,"scrollY":325.8181818181818},
-{"id":5,"expanded":true,"name":"BatallasFase2","order":4,"parentId":2,"scrollX":832,"scrollY":640},
-{"id":6,"expanded":false,"name":"BatallasFase3","order":5,"parentId":2,"scrollX":832,"scrollY":640},
-{"id":7,"expanded":false,"name":"TiendaItems","order":7,"parentId":3,"scrollX":595.6363636363636,"scrollY":325.8181818181818},
+{"id":1,"expanded":true,"name":"Inicio","order":1,"parentId":0,"scrollX":961.1999999999999,"scrollY":525.6},
+{"id":2,"expanded":true,"name":"Entrada-a-la-Torre","order":4,"parentId":1,"scrollX":809,"scrollY":438},
+{"id":3,"expanded":false,"name":"Zona de Descanso","order":6,"parentId":0,"scrollX":970.8,"scrollY":525.6},
+{"id":4,"expanded":true,"name":"BatallasFase1","order":12,"parentId":12,"scrollX":809,"scrollY":438},
+{"id":5,"expanded":true,"name":"BatallasFase2","order":13,"parentId":12,"scrollX":832,"scrollY":640},
+{"id":6,"expanded":false,"name":"BatallasFase3","order":14,"parentId":12,"scrollX":882.5454545454546,"scrollY":477.8181818181818},
+{"id":7,"expanded":false,"name":"TiendaItems","order":7,"parentId":3,"scrollX":809,"scrollY":438},
 {"id":8,"expanded":false,"name":"TiendaArmaduras","order":8,"parentId":3,"scrollX":832,"scrollY":640},
-{"id":9,"expanded":false,"name":"TiendaArmas","order":9,"parentId":3,"scrollX":519,"scrollY":443},
-{"id":10,"expanded":false,"name":"Posada","order":10,"parentId":3,"scrollX":588.3636363636364,"scrollY":318.54545454545456},
-{"id":11,"expanded":false,"name":"CreacionPersonaje","order":11,"parentId":0,"scrollX":588.3636363636364,"scrollY":318.54545454545456}
+{"id":9,"expanded":false,"name":"TiendaArmas","order":9,"parentId":3,"scrollX":882.5454545454546,"scrollY":477.8181818181818},
+{"id":10,"expanded":false,"name":"Posada","order":10,"parentId":3,"scrollX":809,"scrollY":438},
+{"id":11,"expanded":false,"name":"CreacionPersonaje","order":2,"parentId":1,"scrollX":970.8,"scrollY":525.6},
+{"id":12,"expanded":false,"name":"Zonas de batalla","order":11,"parentId":0,"scrollX":809,"scrollY":438},
+{"id":13,"expanded":false,"name":"Refugio Antiguo","order":3,"parentId":11,"scrollX":970.8,"scrollY":525.6},
+{"id":14,"expanded":false,"name":"Personaje","order":5,"parentId":1,"scrollX":970.8,"scrollY":525.6}
 ]

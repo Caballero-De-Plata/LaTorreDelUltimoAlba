@@ -5,5 +5,6 @@ null,
 {"id":3,"battlerName":"Retaguardia","characterIndex":2,"characterName":"Personajes","classId":3,"equips":[3,0,2,3,4],"faceIndex":2,"faceName":"Personajes","traits":[],"initialLevel":2,"maxLevel":99,"name":"Marsha","nickname":"Maga","note":"","profile":""},
 {"id":4,"battlerName":"Vanguardia","characterIndex":1,"characterName":"Personajes","classId":4,"equips":[4,0,2,3,4],"faceIndex":1,"faceName":"Personajes","traits":[],"initialLevel":2,"maxLevel":99,"name":"Lucius","nickname":"Tanque","note":"","profile":""},
 {"id":5,"battlerName":"Player_M","characterIndex":0,"characterName":"player","classId":5,"equips":[0,0,0,0,0],"faceIndex":6,"faceName":"Personajes","traits":[],"initialLevel":1,"maxLevel":99,"name":"","nickname":"","note":"","profile":""},
-{"id":6,"battlerName":"Player_H","characterIndex":1,"characterName":"player","classId":5,"equips":[0,0,0,0,0],"faceIndex":7,"faceName":"Personajes","traits":[],"initialLevel":1,"maxLevel":99,"name":"","nickname":"","note":"","profile":""}
+{"id":6,"battlerName":"Player_H","characterIndex":1,"characterName":"player","classId":5,"equips":[0,0,0,0,0],"faceIndex":7,"faceName":"Personajes","traits":[],"initialLevel":1,"maxLevel":99,"name":"","nickname":"","note":"","profile":""},
+{"id":7,"battlerName":"","characterIndex":0,"characterName":"People1","classId":5,"equips":[0,0,0,0,0],"faceIndex":0,"faceName":"","traits":[],"initialLevel":1,"maxLevel":99,"name":"Niño","nickname":"","note":"","profile":"Un simple niño."}
 ]
